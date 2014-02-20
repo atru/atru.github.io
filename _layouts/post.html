@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% if page.lang == "en" %}
+  {% assign transl_url = page.url | replace: '/en/', '/ru/' %}
+  {% assign transl_lang = "рус" %}
+{% else page.lang == "ru" %}
+  {% assign transl_url = page.url | replace: '/ru/', '/en/' %}
+  {% assign transl_lang = "en" %}
+{% endif %}
+
+<h2>{{ page.captitle }} <span class="translate_up"><a href="{{ transl_url }}">{{ transl_lang }}</a></span></h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+{{ content }}
+</div>
+{% include tags.md %}
