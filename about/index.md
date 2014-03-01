@@ -22,6 +22,6 @@ Technologies:
   * Javascript, jQuery
   * CSS
 
-This blog is powered by [GitHub][git] and [Jekyll][jek].
-[git]: http://github.com
+This blog is powered by [GitHub Pages][git] and [Jekyll][jek].
+[git]: http://pages.github.com
 [jek]: http://jekyllrb.com

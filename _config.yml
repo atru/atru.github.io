@@ -1,3 +1,6 @@
 name: Devdrama
 markdown: redcarpet
 pygments: true
+
+keywords: "MSSQL, Microsoft SQL, CLR, User-defined functions, SQL Server, tips, Sybase ASE UDF"
+description: "Microsoft SQL tips"
