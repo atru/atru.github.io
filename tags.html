@@ -17,7 +17,7 @@ description: "An archive of posts sorted by tag."
   <h1>Tags</h1>
   <ul class="tag-box inline">
   {% for item in (0..num_words) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+    {% capture this_word %}{{ tag_words[item] | strip_spaces }}{% endcapture %}
     <li><a href="#{{ this_word | cgi_escape }}">{{ this_word }} <span>{{ site.tags[this_word].size | divided_by:2 }}</span></a></li>
   {% endunless %}{% endfor %}
   </ul>
