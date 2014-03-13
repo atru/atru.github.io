@@ -9,10 +9,10 @@
             <!--a class="extra" href="/">home</a-->
             <!--a class="extra" href="/categories.html">Categories</a-->
             <!--a class="extra" href="/tags.html">Tags</a-->
-            <a class="extra" href="/about/">About</a>
+            <a class="extra" href="{% if page.lang == "ru" %}/ru/{% else %}/en/{% endif %}about/">About</a>
             {% if page.lang_view == true %}
-              <a class="extra right" href="/"><img alt="View columns" src="/img/gb.png"></a>
-              <a class="extra right" href="/ru/"><img alt="View columns" src="/img/ru.png"></a>
+              <a class="extra right" href="/"><img src="/img/gb.png"></a>
+              <a class="extra right" href="/ru/"><img src="/img/ru.png"></a>
             {% endif %}
           </div>
 
