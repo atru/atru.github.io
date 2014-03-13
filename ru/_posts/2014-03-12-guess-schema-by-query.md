@@ -107,7 +107,7 @@ SELECT SYSDB.dbo._getSchemaByQuery('SELECT * FROM AdventureWorks2008.SalesLT.Cus
 ```
 #Результат#
 
-<img width="100%" alt="View columns" src="/img/2014/getschemabyquery.png" style="cursor:pointer" onclick="window.open('/img/2014/getschemabyquery.png','_blank');return;" />
+<img width="100%" alt="View columns" src="/img/2014/getschemabyquery.png" href="/img/2014/getschemabyquery.png" style="cursor:pointer" onclick="window.open('/img/2014/getschemabyquery.png','_blank');return;" />
 
 #Примечания#
 
