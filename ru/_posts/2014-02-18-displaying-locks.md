@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Просмотр блокирующих соединений в MS SQL"
-captitle:  "Просмотр Блокирующих Соединений в MS SQL"
+captitle:  "Просмотр блокирующих соединений в MS SQL"
 date:   2014-02-18 00:24:10
 categories: MSSQL
 tags: cheatsheet sql

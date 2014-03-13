@@ -81,7 +81,7 @@ SELECT 'AdventureWorks2008' db, C.object_id, C.name, Tp.name AS type, C.column_i
 
 we get a result-set with all table definitions within a database.
 
-<img width="100%" alt="View columns" src="/img/2014/view-column.png"></img>
+<img width="100%" alt="View columns" src="/img/2014/view-column.png" style="cursor:pointer" onclick="window.open('/img/2014/view-column.png','_blank');return;"></img>
 
 #There's a catch#
 
@@ -91,8 +91,8 @@ Also, column type `sysname` and user-defined types may mess things up, so it is 
 
 #Why not `exec sp_help 'AdventureWorks2008.SalesLT.Customer'`?#
 
-  1. Because it is nice to read, but mostly useless.
-  1. Because it will soon become a static table, which is way faster than a procedure.
+  1. Because it is nice to read, but hard to get use of.
+  1. Because it will soon become a static table, which is faster than a procedure.
   1. Because it does not give all the needed information for my purposes. The hard way it is.
 
 
