@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Угадываем схему запроса"
-captitle:  "Угадываем схему запроса"
+title:  "Угадываем схему по запросу"
+captitle:  "Угадываем схему по запросу"
 date: 2014-03-12 16:53:10
 categories: MSSQL
 tags: sql clr

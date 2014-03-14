@@ -8,7 +8,7 @@ tags: sql clr
 lang: en
 ---
 
-This one came up unexpectedly during a forced transition from MS SQL 2008R2 to MS SQL 2012.
+This one came up unexpectedly during a forced migration from MS SQL 2008R2 to MS SQL 2012.
 
 #Background#
 
