@@ -12,11 +12,17 @@
 
 html, body { height: 100%; }
 
+@font-face {
+    font-family: NotoSerif; /* Гарнитура шрифта */
+    src: url(/css/NotoSerif-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
 body {
   background-color: #FFF;
   background:url(../img/body.png);
-  font: 15px Helvetica, Arial, sans-serif;
-  font-size: medium;
+  font: 16px NotoSerif, Helvetica, Arial, sans-serif;
+  /*font-size: medium;*/
   text-align: center;
 }
 
@@ -176,6 +182,7 @@ span.translate_up{
   background-color: #eef;
   background-color: #F8F5ED;
   padding: 0.2em 0.2em 0.2em 0.2em;
+  font-size: 13px;
 }
 
 .post pre code {
