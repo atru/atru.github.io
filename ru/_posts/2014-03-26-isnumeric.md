@@ -18,7 +18,7 @@ lang: ru
 
 Проверим монстра в действии
 
-<center><img title="Fuzzy logic" src="/img/2014/isnumeric_01.png" /></center>
+<center><img title="Неявная логика" src="/img/2014/isnumeric_01.png" /></center>
 
 Очевидно, что `ISNUMERIC('-$00,0.2,,,0')` возвращает `1`. У меня <u title="Devdrama ведь">нет слов</u>.
 
@@ -194,7 +194,7 @@ FROM @value
 
 вернёт такой результат
 
-<center><img title="Predictable results &mdash; as expected" src="/img/2014/isnumeric_02.png" /></center>
+<center><img title="Предсказуемый результат &mdash; как и ожидалось" src="/img/2014/isnumeric_02.png" /></center>
 
 Функция работает ровно так, как от неё ожидают. Если хотите попробовать применить, качайте [здесь][dll].
 
