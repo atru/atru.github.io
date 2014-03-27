@@ -18,7 +18,7 @@ lang: ru
 
 Это CLR-функция, которая возвращает угаданную схему всякий раз, когда мы предоставляем ей запрос.
 
-{% highlight C# %}
+{% highlight c# %}
 public class tableDefinitionClass
 {
 	[SqlFunction(DataAccess= DataAccessKind.Read)]
@@ -126,7 +126,13 @@ SELECT SYSDB.dbo._getSchemaByQuery('SELECT * FROM AdventureWorks2008.SalesLT.Cus
 
 1. Функция, которая подключается к серверу, должна иметь флажок `[SqlFunction(DataAccess=DataAccessKind.Read)]`. В противной случае, могут быть проблемы с подключением из-за безопасности.
 
+#Попробовать#
+
+Если вы хотите применить эту функцию, проследуйте [сюда][dll].
+
 #На эту тему#
 1. [sp\_describe\_first\_result\_set](http://technet.microsoft.com/en-us/library/ff878602.aspx)
 1. [SQL Server 2012 - WITH RESULT SETS](http://www.allaboutmssql.com/2012/10/sql-server-2012-with-result-sets.html)
 1. [MSDN How to use "WITH RESULT SETS" clause in SQL 2012 for dynamic column names.](http://social.msdn.microsoft.com/Forums/en-US/4e98380a-df92-49a0-97d8-4908307573c4/how-to-use-with-result-sets-clause-in-sql-2012-for-dynamic-column-names?forum=transactsql)
+
+[dll]:https://github.com/atru/database-dll
