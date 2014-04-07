@@ -12,15 +12,23 @@
 
 html, body { height: 100%; }
 
+@font-face {
+    font-family: Scada; /* Гарнитура шрифта */
+    src: url(/css/Scada-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
 body {
   background-color: #FFF;
   background:url(../img/body.png);
-  font: 15px Helvetica, Arial, sans-serif;
-  font-size: medium;
+  font: 16px Scada, Helvetica, Arial, sans-serif;
+  /*font-size: medium;*/
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
+  font-size: 120%; }
+h2, h3, h4, h5, h6 {
   font-size: 110%; }
 
 h1 { margin: 1em 0; }
@@ -176,6 +184,7 @@ span.translate_up{
   background-color: #eef;
   background-color: #F8F5ED;
   padding: 0.2em 0.2em 0.2em 0.2em;
+  font-size: 13px;
 }
 
 .post pre code {
@@ -192,3 +201,8 @@ span.translate_up{
 .post pre.terminal code {
   background-color: #333;
 }
+
+.post blockquote {
+	border-left: 4px solid #DDD;
+	padding: 0 15px;
+	color: #777;

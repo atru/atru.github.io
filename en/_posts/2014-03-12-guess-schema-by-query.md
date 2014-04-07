@@ -18,7 +18,7 @@ When the Reference Data System is built on real tables (which user can manipulat
 
 It is a CLR function, which returns the guessed schema whenever we supply it with a query.
 
-{% highlight C# %}
+{% highlight c# %}
 public class tableDefinitionClass
 {
 	[SqlFunction(DataAccess= DataAccessKind.Read)]
@@ -126,7 +126,13 @@ will result in `NULL`. If we want this thing to work, we should specify database
 
 1. The function, which connects to the DB, has to be with `[SqlFunction(DataAccess=DataAccessKind.Read)]`. Otherwise, there might be troublees with linking because of security.
 
+#Try it#
+
+If you want to use this function, download [here][dll].
+
 #Consider Reading#
 1. [sp\_describe\_first\_result\_set](http://technet.microsoft.com/en-us/library/ff878602.aspx)
 1. [SQL Server 2012 - WITH RESULT SETS](http://www.allaboutmssql.com/2012/10/sql-server-2012-with-result-sets.html)
 1. [MSDN How to use "WITH RESULT SETS" clause in SQL 2012 for dynamic column names.](http://social.msdn.microsoft.com/Forums/en-US/4e98380a-df92-49a0-97d8-4908307573c4/how-to-use-with-result-sets-clause-in-sql-2012-for-dynamic-column-names?forum=transactsql)
+
+[dll]:https://github.com/atru/database-dll
