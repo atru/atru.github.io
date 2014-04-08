@@ -4,5 +4,5 @@ redcarpet:
   extensions: [footnotes,strikethrough]
 pygments: true
 
-keywords: "MSSQL, Microsoft SQL, CLR, User-defined functions, SQL Server, tips, Sybase ASE UDF"
+keywords: "MSSQL, Microsoft SQL, CLR, User-defined functions, CLR, SQL Server, tips, Sybase ASE UDF"
 description: "Microsoft SQL tips"
