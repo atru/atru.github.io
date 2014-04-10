@@ -37,9 +37,8 @@ p { margin: 1em 0; }
 a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
-span.translate_up{
-  font-size:70%;
-  vertical-align:super;
+sup.translate_up{
+  font-size:75%;
 }
 
 /*****************************************************************************/
