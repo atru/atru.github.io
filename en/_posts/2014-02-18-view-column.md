@@ -95,4 +95,10 @@ Also, column type `sysname` and user-defined types may mess things up, so it is 
   1. Because it will soon become a static table, which is faster than a procedure.
   1. Because it does not give all the needed information for my purposes. The hard way it is.
 
+What Next?
+==========
+
+[This][copyrow].
+
+[copyrow]: {{ site.url }}/{{ page.lang }}/2014/04/03/copy-row.html
 
