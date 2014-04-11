@@ -8,7 +8,8 @@ tags: sql
 lang: en
 ---
 
-#Data Types#
+Data Types
+=====================
 
 Let's create a database which will serve as a 'system' database for the server. Create a table there, and fill it with everything that `exec sys.sp_datatype_info` has returned.
 
@@ -62,7 +63,8 @@ Having data types in a separate table brings two major advantages:
   * Unlike a procedure, you can join a table (in fact, you can, but OPENROWSET is slow, hard to remember and difficult to maintain: it requires a new connection and so on)
 
 
-#Viewing Columns#
+Viewing Columns
+=====================
 
 Once we try to execute the following:
 
@@ -83,20 +85,22 @@ we get a result-set with all table definitions within a database.
 
 <img width="100%" alt="View columns" src="/img/2014/view-column.png" style="cursor:pointer" onclick="window.open('/img/2014/view-column.png','_blank');return;"></img>
 
-#There's a catch#
+There's a catch
+=====================
 
 As you can see, there is an `object_id` field in the result set. It is the unique if of a table `SELECT OBJECT_ID('AdventureWorks2008.SalesLT.Customer')` *within* the database. So, if you ever decide (which I will do) to put all databases into a single table `SYSDB.._table_columns`, bear in mind that `object_id` does not identify the table within a server. You also need to filter the `db` column.
 
 Also, column type `sysname` and user-defined types may mess things up, so it is worth filtering the `sysname` results in the query.
 
-#Why not `exec sp_help 'AdventureWorks2008.SalesLT.Customer'`?#
+Why not `exec sp_help 'AdventureWorks2008.SalesLT.Customer'`?
+=============================================================
 
   1. Because it is nice to read, but hard to get use of.
   1. Because it will soon become a static table, which is faster than a procedure.
   1. Because it does not give all the needed information for my purposes. The hard way it is.
 
 What Next?
-==========
+=====================
 
 [This][copyrow].
 
