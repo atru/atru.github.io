@@ -28,7 +28,7 @@ Neat.
 Even more: if you want to assemble a dynamic query for copying data from one table to another? Simply enumerate to common [columns][view_column] and wrap it into `INSERT` and `SELECT`.
 
 Where It Came From
-------------------
+---------------------
 
 The original source was taken from [here][original]. The post pretty much explains the mechanism of an MS SQL aggregate for CLR:
 
