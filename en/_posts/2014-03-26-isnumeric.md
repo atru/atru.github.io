@@ -24,7 +24,7 @@ As you can see, `ISNUMERIC('-$00,0.2,,,0')` returns `1`. I am <u title="Devdrama
 Reinvent the wheel, shall we?
 =====================
 
-Sometimes you may need a <strike>normal</strike> more predictable text-to-numeric validation. And that's when we use the [CLR][clr].
+Sometimes you may need a ~~normal~~ more predictable text-to-numeric validation. And that's when we use the [CLR][clr].
 
 ```c#
 public static SqlBoolean fnIsNumeric(SqlString field, string sqltype)
@@ -202,7 +202,7 @@ Obscurity
 
 One could imagine, that proposed `sqlMoney = field.ToSqlMoney()` would interpret `'-$00,0.2,,,0'` as SQL `money`.
 
-But SQL [`money`][money] stores only <strike>normal</strike> decimal values. See for yourself:
+But SQL [`money`][money] stores only ~~normal~~ decimal values. See for yourself:
 
 <center><img title="money is not THAT 'money' one could expect" src="/img/2014/isnumeric_03.png" /></center>
 
