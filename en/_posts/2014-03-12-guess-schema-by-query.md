@@ -30,7 +30,7 @@ public class tableDefinitionClass
 		{
 			string schema="";
 			string sql=query.ToString();
-			
+
 			SqlConnection conn = new SqlConnection("context connection=true");
 			conn.Open();
 			SqlCommand command = null;
@@ -49,9 +49,9 @@ public class tableDefinitionClass
 			catch
 			{
 				conn.Close();
-				return null;	
+				return null;
 			}
-			
+
 			DataTable td = reader.GetSchemaTable();
 			foreach (DataRow myField in td.Rows)
 			{
@@ -72,20 +72,20 @@ public class tableDefinitionClass
 					}
 			    }
 				schema += ColumnName + " " + DataTypeName;
-				if(	DataTypeName == "binary" 
+				if(	DataTypeName == "binary"
 				   || DataTypeName == "char"
 				   || DataTypeName == "nchar"
-				   || DataTypeName == "nvarchar" 
-				   || DataTypeName == "varchar" 
+				   || DataTypeName == "nvarchar"
+				   || DataTypeName == "varchar"
 				   || DataTypeName == "varbinary"
 				  )
 					schema += "(" + (ColumnSize=="2147483647"?"max":ColumnSize) + ")";
-				else if(DataTypeName == "datetime2" 
+				else if(DataTypeName == "datetime2"
 				   || DataTypeName == "datetimeoffset"
 				   || DataTypeName == "time"
 				  )
 					schema += "(" + NumericScale + ")";
-				else if(DataTypeName == "decimal" 
+				else if(DataTypeName == "decimal"
 				   || DataTypeName == "numeric"
 				  )
 					schema += "(" + NumericPrecision + "," + NumericScale + ")";
@@ -113,7 +113,7 @@ SELECT SYSDB.dbo._getSchemaByQuery('SELECT * FROM AdventureWorks2008.SalesLT.Cus
 The Result
 =====================
 
-<img width="100%" alt="View columns" src="/img/2014/getschemabyquery.png" style="cursor:pointer" onclick="window.open('/img/2014/getschemabyquery.png','_blank');return;" />
+<center><img alt="View columns" src="/img/2014/getschemabyquery.png" style="cursor:pointer" onclick="window.open('/img/2014/getschemabyquery.png','_blank');return;" /></center>
 
 Notes
 =====================

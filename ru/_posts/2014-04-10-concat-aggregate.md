@@ -15,13 +15,13 @@ lang: ru
 
 Сравним два запроса:
 
-<img width="100%" alt="Two queries" src="/img/2014/concat_aggregate_01.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_01.png','_blank');return;"></img>
+<center><img alt="Two queries" src="/img/2014/concat_aggregate_01.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_01.png','_blank');return;"/></center>
 
 Как видите, второй запрос агрегирует значения по правилу в `GROUP BY`.
 
 Что нам это даёт? Посмотрим:
 
-<img width="100%" alt="Strings concatenated in aggregate" src="/img/2014/concat_aggregate_02.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_02.png','_blank');return;"></img>
+<center><img alt="Strings concatenated in aggregate" src="/img/2014/concat_aggregate_02.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_02.png','_blank');return;"/></center>
 
 Отлично.
 
@@ -41,7 +41,7 @@ lang: ru
 В чём разница?
 ---------------------
 
-Механизм работал не всегда. Вы ожидали, что н вернёт `a,b,c,d,e,f`, но он выдавал `a,b,cd,e,f` &mdash; по странным причинам. Это проявлялось на объёмных выборках: есть предположение, что замешана многопоточность. Решилось копированием разделителя из соседних групп.
+Механизм работал не всегда. Вы ожидали, что он вернёт `a,b,c,d,e,f`, но он выдавал `a,b,cd,e,f` &mdash; по странным причинам. Это проявлялось на объёмных выборках: есть предположение, что замешана многопоточность. Решилось копированием разделителя из соседних групп.
 
 Свойства функции:
 
