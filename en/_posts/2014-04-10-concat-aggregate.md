@@ -15,13 +15,13 @@ Concatenate Many Rows Into A Single String
 
 Let us compare two simple queries:
 
-<img width="100%" alt="Two queries" src="/img/2014/concat_aggregate_01.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_01.png','_blank');return;"></img>
+<center><img alt="Two queries" src="/img/2014/concat_aggregate_01.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_01.png','_blank');return;"/></center>
 
 As you can see, the second query aggregates values by a `GROUP BY` clause.
 
 What does it give to us? Let's see:
 
-<img width="100%" alt="Strings concatenated in aggregate" src="/img/2014/concat_aggregate_02.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_02.png','_blank');return;"></img>
+<center><img alt="Strings concatenated in aggregate" src="/img/2014/concat_aggregate_02.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_02.png','_blank');return;"/></center>
 
 Neat.
 

@@ -206,3 +206,8 @@ sup.translate_up{
 	border-left: 4px solid #DDD;
 	padding: 0 15px;
 	color: #777;
+}
+
+.post center>img {
+  max-width:100%;
+}
