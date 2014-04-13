@@ -8,32 +8,7 @@ lang_view: false
 
 Здесь я делюсь своими памятками и решениями к различным проблемам, с которыми мне приходится сталкиваться как разработчику. Преимущественно все сообщения касаются SQL.
 
-Среды разработки:
-
-1. Microsoft SQL Management Studio 2012
-1. NetBeans IDE 7.4
-1. SharpDevelop
-
-Технологии:
-
-2. Бизнес-логика:
-  * Microsoft SQL Server 2008R2, 2012
-2. Серверное приложение:
-  * PHP
-  * Apache
-  * Smarty templates
-2. Фронт-энд:
-  * Javascript, jQuery
-  * CSS
-
-В прошлом:
-
-3. Borland Developer Studio 2006, C++
-3. Microsoft Visual Studio
-  * C#
-  * ASP.NET
-  * DevExpress
-
-Блог выполнен на [GitHub Pages][git] и [Jekyll][jek].
+Блог выполнен на [GitHub Pages][git] и [Jekyll][jek]. В оформлении использован шрифт [Scada][scada].
 [git]: http://pages.github.com
 [jek]: http://jekyllrb.com
+[scada]: http://www.scada.lv/company/scada-font

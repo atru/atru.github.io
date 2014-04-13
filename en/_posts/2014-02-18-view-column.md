@@ -8,7 +8,8 @@ tags: sql
 lang: en
 ---
 
-#Data Types#
+Data Types
+=====================
 
 Let's create a database which will serve as a 'system' database for the server. Create a table there, and fill it with everything that `exec sys.sp_datatype_info` has returned.
 
@@ -62,18 +63,19 @@ Having data types in a separate table brings two major advantages:
   * Unlike a procedure, you can join a table (in fact, you can, but OPENROWSET is slow, hard to remember and difficult to maintain: it requires a new connection and so on)
 
 
-#Viewing Columns#
+Viewing Columns
+=====================
 
 Once we try to execute the following:
 
 {% highlight sql %}
 SELECT 'AdventureWorks2008' db, C.object_id, C.name, Tp.name AS type, C.column_id, C.is_nullable, C.is_identity,
-				(CASE when ST.CREATE_PARAMS is null then '' WHEN CHARINDEX(',',ST.CREATE_PARAMS)>0 then CAST(Tp.precision AS varchar(10)) ELSE CAST(C.max_length AS varchar(10)) END) AS length, 
+				(CASE when ST.CREATE_PARAMS is null then '' WHEN CHARINDEX(',',ST.CREATE_PARAMS)>0 then CAST(Tp.precision AS varchar(10)) ELSE CAST(C.max_length AS varchar(10)) END) AS length,
 				(CASE WHEN CHARINDEX(',',ST.CREATE_PARAMS)>0 then CAST(C.scale AS varchar(10)) ELSE '' END) AS precision,
 				(CASE WHEN C.precision > 0 THEN C.precision WHEN C.precision = 0 AND C.max_length > 0 THEN C.max_length ELSE Tp.max_length END) AS StrLen,
 				ST.LITERAL_PREFIX COLLATE Cyrillic_General_CI_AS AS LITERAL_PREFIX, ST.LITERAL_SUFFIX COLLATE Cyrillic_General_CI_AS AS LITERAL_SUFFIX,
 				(CASE WHEN t2.is_primary_key=1 THEN 'Y' END) AS primary_key
-			FROM AdventureWorks2008.sys.columns AS C JOIN AdventureWorks2008.sys.types AS Tp ON(C.system_type_id = Tp.system_type_id) 
+			FROM AdventureWorks2008.sys.columns AS C JOIN AdventureWorks2008.sys.types AS Tp ON(C.system_type_id = Tp.system_type_id)
 					JOIN SYSDB.._datatype_info AS ST ON(Tp.name = ST.TYPE_NAME)
 					left join AdventureWorks2008.sys.index_columns t1 on(t1.column_id = C.column_id and t1.object_id = C.object_id)
 					left JOIN AdventureWorks2008.sys.indexes t2 on(t1.object_id = t2.object_id AND t1.index_id = t2.index_id)
@@ -81,18 +83,26 @@ SELECT 'AdventureWorks2008' db, C.object_id, C.name, Tp.name AS type, C.column_i
 
 we get a result-set with all table definitions within a database.
 
-<img width="100%" alt="View columns" src="/img/2014/view-column.png" style="cursor:pointer" onclick="window.open('/img/2014/view-column.png','_blank');return;"></img>
+<center><img alt="View columns" src="/img/2014/view-column.png" style="cursor:pointer" onclick="window.open('/img/2014/view-column.png','_blank');return;"/></center>
 
-#There's a catch#
+There's a catch
+=====================
 
 As you can see, there is an `object_id` field in the result set. It is the unique if of a table `SELECT OBJECT_ID('AdventureWorks2008.SalesLT.Customer')` *within* the database. So, if you ever decide (which I will do) to put all databases into a single table `SYSDB.._table_columns`, bear in mind that `object_id` does not identify the table within a server. You also need to filter the `db` column.
 
 Also, column type `sysname` and user-defined types may mess things up, so it is worth filtering the `sysname` results in the query.
 
-#Why not `exec sp_help 'AdventureWorks2008.SalesLT.Customer'`?#
+Why not `exec sp_help 'AdventureWorks2008.SalesLT.Customer'`?
+=============================================================
 
   1. Because it is nice to read, but hard to get use of.
   1. Because it will soon become a static table, which is faster than a procedure.
   1. Because it does not give all the needed information for my purposes. The hard way it is.
 
+What Next?
+=====================
+
+[This][copyrow].
+
+[copyrow]: {{ site.url }}/{{ page.lang }}/2014/04/03/copy-row.html
 
