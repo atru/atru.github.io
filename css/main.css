@@ -216,3 +216,8 @@ sup.translate_up{
 .post center>img {
   max-width:100%;
 }
+
+/* custom */
+.post h1 {
+    border-bottom: 1px solid #ccc;
+}
