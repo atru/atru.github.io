@@ -1,5 +1,5 @@
 ---
-title: About
+title: О сайте
 layout: page_bilingual
 lang: ru
 lang_view: false
