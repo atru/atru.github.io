@@ -19,7 +19,7 @@ Let us compare two simple queries:
 
 As you can see, the second query aggregates values by a `GROUP BY` clause.
 
-What does it give to us? Let's see:
+What do we get from that? Let's see:
 
 <center><img alt="Strings concatenated in aggregate" src="/img/2014/concat_aggregate_02.png" style="cursor:pointer" onclick="window.open('/img/2014/concat_aggregate_02.png','_blank');return;"/></center>
 
