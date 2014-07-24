@@ -1,13 +1,12 @@
 ---
-title: About
 layout: default
 ---
 {% if page.lang == "en" %}
   {% assign transl_url = page.url | replace: '/en/', '/ru/' %}
-  {% assign transl_lang = "рус" %}
+  {% assign transl_lang = "по-русски" %}
 {% else page.lang == "ru" %}
   {% assign transl_url = page.url | replace: '/ru/', '/en/' %}
-  {% assign transl_lang = "en" %}
+  {% assign transl_lang = "in english" %}
 {% endif %}
 
 <h2>{{ page.title }} <sup class="translate_up"><a href="{{ transl_url }}">{{ transl_lang }}</a></sup></h2>
