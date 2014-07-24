@@ -1,0 +1,12 @@
+.post h1 {
+    border-bottom: 1px solid #ccc;
+}
+.post p {
+    margin-left: 1em;
+}
+.post ol,.post ul {
+    margin-left: 2.35em;
+}
+.post li p {
+    margin-left: 0;
+}
